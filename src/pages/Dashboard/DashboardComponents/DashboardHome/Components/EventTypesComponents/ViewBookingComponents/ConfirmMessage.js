@@ -7,7 +7,7 @@ const ConfirmMessage = () => {
   const { id } = useParams();
   const { data: invitationData, isLoading } = useQuery(["invitationData"], () =>
     fetch(
-      `https://easy-schedule-backend-production.up.railway.app/event/invitation/single/${id}`
+      `https://easy-schedule.vercel.app/event/invitation/single/${id}`
     ).then((res) => res.json())
   );
   console.log(invitationData);

@@ -4,7 +4,7 @@ import { fetchSchedules } from "../../../redux/slices/scheduleSlice";
 
 const UserSchedule = () => {
   // useEffect(() => {
-  //   fetch(`https://easy-schedule-backend-production.up.railway.app/userSchedule`, {
+  //   fetch(`https://easy-schedule.vercel.app/userSchedule`, {
   //     method: "GET",
   //     headers: {
   //       authorization: `Bearer ${localStorage.getItem("accessToken")}`,

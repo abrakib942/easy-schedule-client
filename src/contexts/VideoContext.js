@@ -4,7 +4,7 @@ import Peer from "simple-peer";
 
 const SocketContext = createContext();
 
-const socket = io("https://easy-schedule-backend-production.up.railway.app/");
+const socket = io("https://easy-schedule.vercel.app/");
 
 const VideoContextProvider = ({ children }) => {
   const [stream, setStream] = useState(null);

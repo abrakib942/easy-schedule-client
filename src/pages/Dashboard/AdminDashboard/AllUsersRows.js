@@ -5,15 +5,12 @@ const AllUsersRows = ({ user, refetch, index }) => {
   const { name, email, role } = user;
   // console.log(email, role);
   const makeAdmin = () => {
-    fetch(
-      `https://easy-schedule-backend-production.up.railway.app/users/admin/${email}`,
-      {
-        method: "PUT",
-        headers: {
-          authorization: `Bearer ${localStorage.getItem("accessToken")}`,
-        },
-      }
-    )
+    fetch(`https://easy-schedule.vercel.app/users/admin/${email}`, {
+      method: "PUT",
+      headers: {
+        authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+      },
+    })
       .then((res) => {
         // console.log(res);
         if (res.status === 403) {

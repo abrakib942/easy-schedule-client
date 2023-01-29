@@ -5,9 +5,9 @@ import ZoomSchedule from "./ZoomSchedule";
 
 const ZoomSchedules = () => {
   const [schedules, setSchedules] = useState([]);
-  /* arif  https://easy-schedule-backend-production.up.railway.app*/
+  /* arif  https://easy-schedule.vercel.app*/
   useEffect(() => {
-    fetch("https://easy-schedule-backend-production.up.railway.app/schedule")
+    fetch("https://easy-schedule.vercel.app/schedule")
       .then((res) => res.json())
       .then((data) => setSchedules(data));
   }, []);

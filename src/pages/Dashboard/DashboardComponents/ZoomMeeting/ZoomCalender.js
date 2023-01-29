@@ -18,15 +18,12 @@ const ZoomCalender = () => {
       headers: {
         // authorization
       },
-      url: `https://easy-schedule-backend-production.up.railway.app/event/create/group`,
+      url: `https://easy-schedule.vercel.app/event/create/group`,
       data: data,
     }) */
 
     axios
-      .post(
-        "https://easy-schedule-backend-production.up.railway.app/addSchedule",
-        data
-      )
+      .post("https://easy-schedule.vercel.app/addSchedule", data)
       .then((res) => {
         console.log(res);
         if (res.data.insertedId) {

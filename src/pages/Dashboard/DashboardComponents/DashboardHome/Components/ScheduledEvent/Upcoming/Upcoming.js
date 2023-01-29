@@ -10,9 +10,7 @@ const Upcoming = () => {
   const [invites, setInvites] = useState([]);
   const [user] = useAuthState(auth);
   useEffect(() => {
-    fetch(
-      `https://easy-schedule-backend-production.up.railway.app/event/invited/${user?.email}`
-    )
+    fetch(`https://easy-schedule.vercel.app/event/invited/${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
         setInvites(data);

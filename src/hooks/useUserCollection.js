@@ -7,9 +7,7 @@ const useUserEvents = () => {
     data: usersData,
     refetch,
   } = useQuery(["usersData"], () =>
-    fetch(`https://easy-schedule-backend-production.up.railway.app/users`).then(
-      (res) => res.json()
-    )
+    fetch(`https://easy-schedule.vercel.app/users`).then((res) => res.json())
   );
 
   return { isLoading, error, usersData, refetch };

@@ -77,7 +77,7 @@ const UpdateEvent = ({
 
     axios
       .patch(
-        `https://easy-schedule-backend-production.up.railway.app/update/event/${eventId}`,
+        `https://easy-schedule.vercel.app/update/event/${eventId}`,
         {
           eventName,
           eventDate,

@@ -50,7 +50,7 @@ const SignUp = () => {
     // console.log(name, email);
     const allData = { name, email };
     // console.log(allData);
-    fetch("https://easy-schedule-backend-production.up.railway.app/users", {
+    fetch("https://easy-schedule.vercel.app/users", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

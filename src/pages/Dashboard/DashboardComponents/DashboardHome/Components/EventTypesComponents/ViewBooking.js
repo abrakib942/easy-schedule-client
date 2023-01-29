@@ -22,9 +22,9 @@ const ViewBooking = () => {
     data: userEvent,
     refetch,
   } = useQuery(["eventData"], () =>
-    fetch(
-      `https://easy-schedule-backend-production.up.railway.app/event/single/${id}`
-    ).then((res) => res.json())
+    fetch(`https://easy-schedule.vercel.app/event/single/${id}`).then((res) =>
+      res.json()
+    )
   );
 
   const [date, setDate] = useState(new Date());
@@ -196,7 +196,7 @@ const ViewBooking = () => {
       headers: {
         // authorization
       },
-      url: `https://easy-schedule-backend-production.up.railway.app/event/invitation`,
+      url: `https://easy-schedule.vercel.app/event/invitation`,
       data: invitation,
     })
       .then((res) => {

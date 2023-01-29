@@ -18,9 +18,7 @@ const RealTimeNotification = ({ res }) => {
   // console.log(user);
 
   useEffect(() => {
-    fetch(
-      `https://easy-schedule-backend-production.up.railway.app/event/invitation/${user?.email}`
-    )
+    fetch(`https://easy-schedule.vercel.app/event/invitation/${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
         // setNotification(data);
@@ -34,7 +32,7 @@ const RealTimeNotification = ({ res }) => {
     refetch,
   } = useQuery(["notifications"], () =>
     fetch(
-      `https://easy-schedule-backend-production.up.railway.app/event/invitation/${user?.email}`
+      `https://easy-schedule.vercel.app/event/invitation/${user?.email}`
     ).then((res) => res.json())
   );
   const handleRead = () => {

@@ -3,15 +3,12 @@ import { toast } from "react-toastify";
 const ManageUsersRow = ({ user, refetch, index }) => {
   const { name, email, setUser } = user;
   const removeAdmin = (id) => {
-    fetch(
-      `https://easy-schedule-backend-production.up.railway.app/users/${id}`,
-      {
-        method: "DELETE",
-        headers: {
-          authorization: `${localStorage.getItem("accessToken")}`,
-        },
-      }
-    )
+    fetch(`https://easy-schedule.vercel.app/users/${id}`, {
+      method: "DELETE",
+      headers: {
+        authorization: `${localStorage.getItem("accessToken")}`,
+      },
+    })
       .then((res) => {
         // console.log(res);
         if (res.status === 403) {

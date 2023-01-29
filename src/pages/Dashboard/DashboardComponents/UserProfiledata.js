@@ -46,18 +46,15 @@ const UserProfiledata = () => {
             img: img,
           };
           // send to your database
-          fetch(
-            `https://easy-schedule-backend-production.up.railway.app/users/${email}`,
-            {
-              method: "PATCH",
-              headers: {
-                "content-type": "application/json",
-                authorization: `Bearer ${localStorage.getItem("accessToken")}`,
-              },
+          fetch(`https://easy-schedule.vercel.app/users/${email}`, {
+            method: "PATCH",
+            headers: {
+              "content-type": "application/json",
+              authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+            },
 
-              body: JSON.stringify(userData),
-            }
-          )
+            body: JSON.stringify(userData),
+          })
             .then((res) => res.json())
             // .then(inserted => {
             //     console.log(inserted)

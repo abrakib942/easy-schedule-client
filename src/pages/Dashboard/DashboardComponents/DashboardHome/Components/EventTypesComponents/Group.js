@@ -47,7 +47,7 @@ const Group = () => {
       headers: {
         // authorization
       },
-      url: `https://easy-schedule-backend-production.up.railway.app/event/create/group`,
+      url: `https://easy-schedule.vercel.app/event/create/group`,
       data: fullData,
     })
       .then((res) => {

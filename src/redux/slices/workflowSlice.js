@@ -4,9 +4,7 @@ import axios from "axios";
 export const fetchWorkflows = createAsyncThunk(
   "workflows/fetchWorkflows",
   async () => {
-    const res = await axios.get(
-      "https://easy-schedule-backend-production.up.railway.app/workflow"
-    );
+    const res = await axios.get("https://easy-schedule.vercel.app/workflow");
     return res.data;
   }
 );

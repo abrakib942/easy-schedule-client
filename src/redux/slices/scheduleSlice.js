@@ -5,7 +5,7 @@ export const fetchSchedules = createAsyncThunk(
   "schedules/fetchSchedules",
   async () => {
     const res = await axios.get(
-      "https://easy-schedule-backend-production.up.railway.app/userSchedule"
+      "https://easy-schedule.vercel.app/userSchedule"
     );
     return res.data;
   }

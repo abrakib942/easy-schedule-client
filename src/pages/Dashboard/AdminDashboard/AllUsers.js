@@ -9,7 +9,7 @@ const AllUsers = () => {
     isLoading,
     refetch,
   } = useQuery(["users"], () =>
-    fetch("https://easy-schedule-backend-production.up.railway.app/users", {
+    fetch("https://easy-schedule.vercel.app/users", {
       method: "GET",
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,
