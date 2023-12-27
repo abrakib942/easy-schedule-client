@@ -182,14 +182,14 @@ const SignUp = () => {
               </Link>
             </p>
 
-            <div className="divider text-neutral">OR</div>
+            {/* <div className="divider text-neutral">OR</div>
             <button
               onClick={() => signInWithGoogle()}
               className="btn btn-neutral flex justify-center"
             >
               <img className="w-8 mr-12" src={google} alt="" />
               Continue with Google
-            </button>
+            </button> */}
           </div>
         </div>
       </div>

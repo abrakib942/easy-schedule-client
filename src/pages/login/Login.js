@@ -47,7 +47,7 @@ const Login = () => {
     <div className="bg-primary">
       <div className=" w-96 mx-auto py-16">
         <div className="flex flex-col shadow-2xl card-body w-64 rounded-lg">
-          Login Credential- <p>Email: abrakib942@gmail.com</p>{" "}
+          admin Credential- <p>Email: abrakib942@gmail.com</p>{" "}
           <p>pass: 123456</p>
         </div>
         <div className=" shadow-2xl card-body bg-secondary rounded-lg">
@@ -137,14 +137,14 @@ const Login = () => {
             </Link>
           </p>
 
-          <div className="divider">OR</div>
-          <button
+          {/* <div className="divider">OR</div> */}
+          {/* <button
             onClick={() => signInWithGoogle()}
             className="btn btn-neutral flex justify-center"
           >
             <img className="w-8 mr-12" src={google} alt="" />
             Continue with Google
-          </button>
+          </button> */}
         </div>
       </div>
     </div>
